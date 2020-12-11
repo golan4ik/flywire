@@ -78,7 +78,7 @@ const MediaLayout = (props) => {
             <CardContent>
               <iframe
                 title="asset_video"
-                src={link}
+                src={link.replace('http', 'https')}
                 width="640"
                 height="370"
                 scrolling="no"
