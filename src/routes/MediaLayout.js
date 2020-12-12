@@ -29,7 +29,7 @@ const MediaLayout = (props) => {
   useEffect(() => {
     setLoading(true);
     Promise.all([getMediaLinks(), getItemMeta()]).then(([links, meta]) => {
-      setLink(links[0]);
+      setLink(links[0].replace('http://', 'https://'));
       setMeta(meta);
       setLoading(false);
     });
